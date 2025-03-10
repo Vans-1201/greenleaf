@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenLeaf Organics - Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>GreenLeaf Organics</h1>
+            <p>Your source for fresh, local, and organic goodness in Hyderabad.</p>
+        </div>
+    </header>
+    <section id="about-intro" class="container">
+        <h2>Welcome to GreenLeaf Organics</h2>
+        <p>GreenLeaf Organics is dedicated to providing Hyderabad's health-conscious families with the finest organic produce and products. We partner with local farmers to ensure freshness and quality, bringing you the best nature has to offer.</p>
+        <p>We believe in sustainable practices and supporting our community. Learn more <a href="about.html">about us</a> and our mission.</p>
+    </section>
+    <section id="products-intro" class="container">
+        <h2>Explore Our Products</h2>
+        <div class="product-image">
+            <img src="https://th.bing.com/th/id/OIG4.nYdGv188TCQTNDhuiX5W?pid=ImgGn" alt="Organic Products">
+        </div>
+        <p>Discover a wide range of fresh, organic produce, dairy, bakery items, and more. <a href="products.html">View our product selection</a>.</p>
+    </section>
+    <section id="carousel" class="container carousel-section">
+        <h2>Our Favorites</h2>
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="https://th.bing.com/th/id/OIG3.8mid478vdl5SklKLj8HQ?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Image 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://th.bing.com/th/id/OIG3.bHSX013yxbMviwXoK70W?pid=ImgGn" alt="Image 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://th.bing.com/th/id/OIG3.UOFDsXjZ78LD7rn_cZJl?pid=ImgGn" alt="Image 3">
+            </div>
+        </div>
+    </section>
+    <section id="contact-intro" class="container">
+        <h2>Get in Touch</h2>
+        <p>Have questions or feedback? We'd love to hear from you. <a href="contact.html">Contact us</a> today.</p>
+    </section>
+    <footer>
+        <div class="container">
+            <p>© 2024 GreenLeaf Organics. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const slides = document.querySelectorAll('.carousel-slide');
+        let currentIndex = 0;
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    </script>
+</body>
+</html>
